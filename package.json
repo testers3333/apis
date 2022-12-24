@@ -1,0 +1,19 @@
+{
+  "name": "apis",
+  "version": "0.0.1",
+  "description": "Apis for all.",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "apis",
+    "web"
+  ],
+  "author": "testers2222",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security"
+  }
+}
