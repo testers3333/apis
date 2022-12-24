@@ -32,17 +32,17 @@ class Apis {
                         if(!["get", "post", "patch", "put", "delete"].includes(api.method.toLowerCase())) throw new TypeError("Le type de la méthode doit-être une chaîne de caractère au choix 'get', 'post', 'patch', 'put' ou 'delete'.");
                         switch (api.method.toLowerCase()){
                             case "get":
-                                this.app.get(`/api/${api.route}`, async (...args) => api.execute(this, ...args));
+                                this.app.get(`/api${api.route}`, async (...args) => api.execute(this, ...args));
                             case "post":
-                                this.app.post(`/api/${api.route}`, async (...args) => api.execute(this, ...args));
+                                this.app.post(`/api${api.route}`, async (...args) => api.execute(this, ...args));
                             case "patch":
-                                this.app.patch(`/api/${api.route}`, async (...args) => api.execute(this, ...args));
+                                this.app.patch(`/api${api.route}`, async (...args) => api.execute(this, ...args));
                             case "put":
-                                this.app.put(`/api/${api.route}`, async (...args) => api.execute(this, ...args));
+                                this.app.put(`/api${api.route}`, async (...args) => api.execute(this, ...args));
                             case "delete":
-                                this.app.delete(`/api/${api.route}`, async (...args) => api.execute(this, ...args));
+                                this.app.delete(`/api${api.route}`, async (...args) => api.execute(this, ...args));
                             default:
-                                this.app.get(`/api/${api.route}`, async (...args) => api.execute(this, ...args));
+                                this.app.get(`/api${api.route}`, async (...args) => api.execute(this, ...args));
                         }
                         this.files.push(file);
                         console.log(`Api [${api.method.toUpperCase()}] ${api.route} est désormais fonctionnelle.`);
