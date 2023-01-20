@@ -55,6 +55,9 @@ class Apis {
         this.config("json spaces", 2);
         
         this.startFiles()
+        this.app.get("/", async (req, res) => {
+            res.send({message: 'test'});
+        });
     }
 };
 
