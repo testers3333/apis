@@ -8,8 +8,8 @@ class Apis {
         this.files = [];
     }
 
-    async listen(port, message){
-        this.app.listen(port, async () => console.log(message));
+    async listen(message){
+        this.app.listen(process.env.PORT || 8080, async () => console.log(message));
     }
 
     async config(name, value){
@@ -51,7 +51,7 @@ class Apis {
     }
 
     async start(){
-        this.listen(8080, "Les apis se sont connectées.");
+        this.listen("Les apis se sont connectées.");
         this.config("json spaces", 2);
         this.app.use(express.json());
         
