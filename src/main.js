@@ -53,8 +53,9 @@ class Apis {
     async start(){
         this.listen(8080, "Les apis se sont connectées.");
         this.config("json spaces", 2);
+        this.app.use(express.json());
         
-        this.startFiles()
+        this.startFiles();
         this.app.get("/", async (req, res) => {
             res.send({message: 'test'});
         });
